@@ -1,3 +1,18 @@
+<!-- TODO: Forms:
+ Full Name (First and Last Name)
+Email Address 
+Phone Number 
+Preferred Travel Destination (Options: Bali, Paris, Tokyo, New York, Sydney, Bora Bora, Tahiti, Punta Cana)
+Travel Departure Date
+Number of Travelers 
+Type of Travel Package (Options: Budget, Standard, Luxury)
+Special Requests/Comments 
+Payment Method (Dropdown or Radio Buttons)
+Options: Credit Card, PayPal, Bank Transfer
+Credit Card Number
+CVC
+Upload ID Proof (File Input)-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +23,27 @@
 </head>
 <body>
     <h1>Book Your Vacation Today!</h1>
-    <form>
+    <form action="https://webdevbasics.net/script/demo.php" method="post">
+        <fieldset>
+           <p>All options marked with an asterisk '*' are required.</p>
+            <div>
+                <label for="firstName">First Name*</label>
+                <input id="firstName" name="firstName" type="text" placeholder="John" required aria-required="true">
+            </div>
+            <div>
+                <label for="lastName">Last Name*</label>
+                <input id="lastName" name="lastName" type="text" placeholder="Doe" required aria-required="true">
+            </div>
+            <div>
+                <label for="mail">Email Address*</label>
+                <input id="mail" name="mail" type="text" placeholder="Johndoe@mail.com" required aria-required="true">
+            </div>
+            <div>
+                <label for="phoneNumber">Phone Number*</label>
+                <input id="phoneNumber" name="phoneNumber" type="text" placeholder="(123)-456-789" required aria-required="true">
+            </div>
+       </div>
+        </fieldset>
     </form>
 </body>
 </html>
