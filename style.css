@@ -1,1 +1,42 @@
-/*TODO: The css*/
+textarea[id=cvc],
+textarea[id=cardNum]{
+    resize: none
+}
+
+h1 {
+    text-align: center;
+}
+
+legend {
+    text-align: center;
+    font-weight: bold;
+}
+
+fieldset {
+    background-color: #FFF;
+	border-color: rgba(0, 0, 0, 1);
+	border-style: solid;
+    border-radius: 6px;
+	margin-bottom: 25px;
+	padding: 10px;
+}
+
+body {
+	color: #000;
+	font-family: "Roberto", sans-serif;
+	font-style: normal;
+	font-size: 1rem; 
+	margin: 0;
+}
+
+.required-asterisk {
+    color: red;
+    font-weight: bold;
+	margin-left: 2px;
+}
+
+/*TODO:
+    Add background
+    Add grids, it looks ugly right now
+    Style the submit button, that is fucking atrocious
+    Make it all look fucking good*/
