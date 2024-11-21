@@ -1,12 +1,4 @@
 <!-- TODO: Forms:
- Full Name (First and Last Name)
-Email Address 
-Phone Number 
-Preferred Travel Destination (Options: Bali, Paris, Tokyo, New York, Sydney, Bora Bora, Tahiti, Punta Cana)
-Travel Departure Date
-Number of Travelers 
-Type of Travel Package (Options: Budget, Standard, Luxury)
-Special Requests/Comments 
 Payment Method (Dropdown or Radio Buttons)
 Options: Credit Card, PayPal, Bank Transfer
 Credit Card Number
@@ -23,9 +15,10 @@ Upload ID Proof (File Input)-->
 </head>
 <body>
     <h1>Book Your Vacation Today!</h1>
+    <p>All options marked with an asterisk '*' are required.</p>
     <form action="https://webdevbasics.net/script/demo.php" method="post">
         <fieldset>
-           <p>All options marked with an asterisk '*' are required.</p>
+           <legend>Essential Information</legend>
             <div>
                 <label for="firstName">First Name*</label>
                 <input id="firstName" name="firstName" type="text" placeholder="John" required aria-required="true">
@@ -42,8 +35,74 @@ Upload ID Proof (File Input)-->
                 <label for="phoneNumber">Phone Number*</label>
                 <input id="phoneNumber" name="phoneNumber" type="text" placeholder="(123)-456-789" required aria-required="true">
             </div>
-       </div>
         </fieldset>
+        <fieldset>
+            <legend>Travel Information</legend>
+            <div>
+                <label for="destination">Preferred Travel Destination*</label>
+                <select id="destination" name="destination" size="1" required aria-required="true">
+                    <option disabled selected value="">-- select an option --</option>
+                    <option value="bali">Bali</option>
+                    <option value="paris">Paris</option>
+                    <option value="tokyo">Tokyo</option>
+                    <option value="newYork">New York</option>
+                    <option value="sydney">Sydney</option>
+                    <option value="boraBora">Bora Bora</option>
+                    <option value="tahiti">Tahiti</option>
+                    <option value="puntaCana">Punta Cana</option>
+                </select>
+            </div>
+            <div>
+                <label for="departureDate">Date of Departure*</label>
+                <input id=departureDate name="departureDate" type="date" required aria-required="true">
+            </div>
+            <div>
+                <label for="quantity">Number of Travelers:*</label>
+                <input id=quantity name="quantity" type="number" min="1" max="10" required aria-required="true">
+            </div>
+            <div>
+                <p>Type of travel Package*</p>
+                <label for="budget">Budget</label>
+                <input id="budget" name="budget" type="checkbox" required aria-required="true">
+                <label for="standard">Standard</label>
+                <input id="standard" name="standard" type="checkbox" required aria-required="true">
+                <label for="luxary">Luxury</label>
+                <input id="luxary" name="luxary" type="checkbox" required aria-required="true">
+            </div>
+            <div>
+                <br><label for="requests">Special Requests/Comments</label> <br>
+                <textarea id="requests" name="requests" rows="4" cols="20"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Payment information</legend>
+            <div>
+                <label for="payMethod">Payment Method:*</label>
+                <select id="payMethod" name="payMethod" size="1" required aria-required="true">
+                    <option disabled selected value="">-- select an option --</option>
+                    <option>Credit Card</option>
+                    <option>PayPal</option>
+                    <option>Bank Transfer</option>
+                </select>
+            </div>
+            <div>
+                <br><label for="cardNum">Card Number*</label>
+                <textarea id="cardNum" name="cardNum" rows="1" cols="14" maxlength="14" required aria-required="true">1234 5678 9012</textarea>
+            </div>
+            <div>
+                <br><label for="cvc">CVC*</label>
+                <textarea id="cvc" name="cvc" rows="1" cols="3" maxlength="3" required aria-required="true">123</textarea>
+            </div>
+            <div>
+                <br><label for="fileUpload">Upload a Picture of Your ID Here*</label> <br>
+                <input id="fileUpload" name="fileUpload" type="file" required aria-required="true">
+            </div>
+        </fieldset>
+        <div>
+            <div>
+               <br> <button type="submit">Submit</button>
+            </div>
+        </div>
     </form>
 </body>
 </html>
