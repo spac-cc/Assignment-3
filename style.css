@@ -14,7 +14,7 @@ legend {
 
 fieldset {
     background-color: #FFF;
-	border-color: rgba(0, 0, 0, 1);
+	border-color: #000;
 	border-style: solid;
     border-radius: 6px;
 	margin-bottom: 25px;
@@ -35,6 +35,26 @@ body {
 	margin-left: 2px;
 }
 
+::placeholder {
+    text-align: center;
+}
+
+button {
+    background-color: FFF;
+	border: 1px solid #000;
+	border-radius: 6px;
+	font-size: 1rem;
+	padding: 10px 30px;
+}
+
+
+button:hover {
+    background-color: #cacaca
+}
+
+#wrapper {
+    margin: 25px;
+}
 /*TODO:
     Add background
     Add grids, it looks ugly right now

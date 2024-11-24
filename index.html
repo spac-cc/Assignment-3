@@ -9,7 +9,7 @@
     <title>Vacations Airlines</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="wrapper">
     <h1>Book Your Vacation Today!</h1>
     <p>All options marked with an asterisk '<span class="required-asterisk">*</span>' are required.</p>
     <form action="https://webdevbasics.net/script/demo.php" method="post">
@@ -61,11 +61,11 @@
             <div>
                 <p>Type of travel Package<span class="required-asterisk">*</span></p>
                 <label for="budget">Budget</label>
-                <input id="budget" name="budget" type="checkbox" required aria-required="true">
+                <input id="budget" name="travelPkge" type="radio" required aria-required="true">
                 <label for="standard">Standard</label>
-                <input id="standard" name="standard" type="checkbox" required aria-required="true">
+                <input id="standard" name="travelPkge" type="radio" required aria-required="true">
                 <label for="luxary">Luxury</label>
-                <input id="luxary" name="luxary" type="checkbox" required aria-required="true">
+                <input id="luxary" name="travelPkge" type="radio" required aria-required="true">
             </div>
             <div>
                 <br><label for="requests">Special Requests/Comments</label> <br>
