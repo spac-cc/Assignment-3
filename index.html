@@ -14,89 +14,99 @@
     <p>All options marked with an asterisk '<span class="required-asterisk">*</span>' are required.</p>
     <form action="https://webdevbasics.net/script/demo.php" method="post">
         <!--Essential info box-->
-        <fieldset>
-           <legend>Essential Information</legend>
-            <div>
-                <label for="firstName">First Name<span class="required-asterisk">*</span></label>
-                <input id="firstName" name="firstName" type="text" placeholder="John" required aria-required="true">
-            </div>
-            <div>
-                <label for="lastName">Last Name<span class="required-asterisk">*</span></label>
-                <input id="lastName" name="lastName" type="text" placeholder="Doe" required aria-required="true">
-            </div>
-            <div>
-                <label for="mail">Email Address<span class="required-asterisk">*</span></label>
-                <input id="mail" name="mail" type="text" placeholder="Johndoe@mail.com" required aria-required="true">
-            </div>
-            <div>
-                <label for="phoneNumber">Phone Number<span class="required-asterisk">*</span></label>
-                <input id="phoneNumber" name="phoneNumber" type="text" placeholder="(123)-456-789" required aria-required="true">
-            </div>
-        </fieldset>
+        <div class="grid-container">
+            <fieldset>
+            <legend>Essential Information</legend>
+                <div>
+                    <div class="two-columns">
+                        <label for="firstName">First Name<span class="required-asterisk">*</span></label>
+                        <input id="firstName" name="firstName" type="text" placeholder="John" required aria-required="true">
+                    </div>
+                    <div class="two-columns">
+                        <label for="lastName">Last Name<span class="required-asterisk">*</span></label>
+                        <input id="lastName" name="lastName" type="text" placeholder="Doe" required aria-required="true">
+                    </div>
+                    <div class="two-columns">
+                        <label for="mail">Email Address<span class="required-asterisk">*</span></label>
+                        <input id="mail" name="mail" type="text" placeholder="Johndoe@mail.com" required aria-required="true">
+                    </div>
+                    <div class="two-columns">
+                        <label for="phoneNumber">Phone Number<span class="required-asterisk">*</span></label>
+                        <input id="phoneNumber" name="phoneNumber" type="text" placeholder="(123)-456-7890" required aria-required="true">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
         <!--Travel information box-->
-        <fieldset>          
-            <legend>Travel Information</legend>
-            <div>
-                <label for="destination">Preferred Travel Destination<span class="required-asterisk">*</span></label>
-                <select id="destination" name="destination" size="1" required aria-required="true">
-                    <option disabled selected value="">-- select an option --</option>
-                    <option value="bali">Bali</option>
-                    <option value="paris">Paris</option>
-                    <option value="tokyo">Tokyo</option>
-                    <option value="newYork">New York</option>
-                    <option value="sydney">Sydney</option>
-                    <option value="boraBora">Bora Bora</option>
-                    <option value="tahiti">Tahiti</option>
-                    <option value="puntaCana">Punta Cana</option>
-                </select>
-            </div>
-            <div>
-                <label for="departureDate">Date of Departure<span class="required-asterisk">*</span></label>
-                <input id=departureDate name="departureDate" type="date" required aria-required="true">
-            </div>
-            <div>
-                <label for="quantity">Number of Travelers:<span class="required-asterisk">*</span></label>
-                <input id=quantity name="quantity" type="number" min="1" max="10" required aria-required="true">
-            </div>
-            <div>
-                <p>Type of travel Package<span class="required-asterisk">*</span></p>
-                <label for="budget">Budget</label>
-                <input id="budget" name="travelPkge" type="radio" required aria-required="true">
-                <label for="standard">Standard</label>
-                <input id="standard" name="travelPkge" type="radio" required aria-required="true">
-                <label for="luxary">Luxury</label>
-                <input id="luxary" name="travelPkge" type="radio" required aria-required="true">
-            </div>
-            <div>
-                <br><label for="requests">Special Requests/Comments</label> <br>
-                <textarea id="requests" name="requests" rows="4"></textarea>
-            </div>
-        </fieldset>
+        <div class="grid-container">
+            <fieldset>          
+                <legend>Travel Information</legend>
+                <div class="travel-columns">
+                    <div>
+                        <label for="destination">Preferred Travel Destination<span class="required-asterisk">*</span></label>
+                        <select id="destination" name="destination" size="1" required aria-required="true">
+                            <option disabled selected value="">-- select an option --</option>
+                            <option value="bali">Bali</option>
+                            <option value="paris">Paris</option>
+                            <option value="tokyo">Tokyo</option>
+                            <option value="newYork">New York</option>
+                            <option value="sydney">Sydney</option>
+                            <option value="boraBora">Bora Bora</option>
+                            <option value="tahiti">Tahiti</option>
+                            <option value="puntaCana">Punta Cana</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="departureDate">Date of Departure<span class="required-asterisk">*</span></label>
+                        <input id=departureDate name="departureDate" type="date" required aria-required="true">
+                    </div>
+                    <div>
+                        <label for="quantity">Number of Travelers:<span class="required-asterisk">*</span></label>
+                        <input id=quantity name="quantity" type="number" min="1" max="10" required aria-required="true">
+                    </div>
+                    <div>
+                        <p>Type of travel Package<span class="required-asterisk">*</span></p>
+                        <label for="budget">Budget</label>
+                        <input id="budget" name="travelPkge" type="radio" required aria-required="true">
+                        <label for="standard">Standard</label>
+                        <input id="standard" name="travelPkge" type="radio" required aria-required="true">
+                        <label for="luxary">Luxury</label>
+                        <input id="luxary" name="travelPkge" type="radio" required aria-required="true">
+                    </div>
+                    <div>
+                        <br><label for="requests">Special Requests/Comments</label> <br>
+                        <textarea id="requests" name="requests" rows="4"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
         <!--Payment information box-->
-        <fieldset>
-            <legend>Payment information</legend>
-            <div>
-                <label for="payMethod">Payment Method:<span class="required-asterisk">*</span></label>
-                <select id="payMethod" name="payMethod" size="1" required aria-required="true">
-                    <option disabled selected value="">-- select an option --</option>
-                    <option>Credit Card</option>
-                    <option>PayPal</option>
-                    <option>Bank Transfer</option>
-                </select>
-            </div>
-            <div>
-                <br><label for="cardNum">Card Number<span class="required-asterisk">*</span></label>
-                <textarea id="cardNum" name="cardNum" rows="1" cols="12" maxlength="14" placeholder="1234 5678 9012" aria-required="true"></textarea>
-            </div>
-            <div>
-                <br><label for="cvc">CVC<span class="required-asterisk">*</span></label>
-                <textarea id="cvc" name="cvc" rows="1" cols="3" maxlength="3" placeholder="123" required aria-required="true"></textarea>
-            </div>
-            <div>
-                <br><label for="fileUpload">Upload a Picture of Your ID Here<span class="required-asterisk">*</span></label> <br>
-                <input id="fileUpload" name="fileUpload" type="file" required aria-required="true">
-            </div>
-        </fieldset>
+        <div class="grid-container">
+            <fieldset>
+                <legend>Payment information</legend>
+                <div>
+                    <label for="payMethod">Payment Method:<span class="required-asterisk">*</span></label>
+                    <select id="payMethod" name="payMethod" size="1" required aria-required="true">
+                        <option disabled selected value="">-- select an option --</option>
+                        <option>Credit Card</option>
+                        <option>PayPal</option>
+                        <option>Bank Transfer</option>
+                    </select>
+                </div>
+                <div>
+                    <br><label for="cardNum">Card Number<span class="required-asterisk">*</span></label>
+                    <textarea id="cardNum" name="cardNum" rows="1" cols="12" maxlength="14" placeholder="1234 5678 9012" aria-required="true"></textarea>
+                </div>
+                <div>
+                    <br><label for="cvc">CVC<span class="required-asterisk">*</span></label>
+                    <textarea id="cvc" name="cvc" rows="1" cols="3" maxlength="3" placeholder="123" required aria-required="true"></textarea>
+                </div>
+                <div>
+                    <br><label for="fileUpload">Upload a Picture of Your ID Here<span class="required-asterisk">*</span></label> <br>
+                    <input id="fileUpload" name="fileUpload" type="file" required aria-required="true">
+                </div>
+            </fieldset>
+        </div>
         <div>
             <div>
                <br> <button id=finishedButton type="submit">Submit</button>
