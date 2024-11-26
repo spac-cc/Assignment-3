@@ -1,24 +1,38 @@
 textarea[id=cvc],
 textarea[id=cardNum]{
-    resize: none
+    resize: none;
+}
+
+p {
+    text-align: center;
+}
+
+footer {
+	background-color: #7428ea;
+	color: #fff;
+	margin-top: 25px;
+	padding: 15px;
+
 }
 
 h1 {
     text-align: center;
+    color: #FFF
 }
 
 legend {
     text-align: center;
     font-weight: bold;
+    padding: 10px;
 }
 
 label {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 fieldset {
-    background-color: #FFF;
-	border-color: #000;
+    background-color: rgba(0, 0, 0, 0.6);
+	border-color: rgba(0, 0, 0, 0.2);
 	border-style: solid;
     border-radius: 6px;
 	margin-bottom: 25px;
@@ -26,9 +40,11 @@ fieldset {
 }
 
 body {
-    background-image: url(img/placeholder.jpg);
-    background-size: 100vw 100vh;
-	color: #000;
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	color: #FFF;
 	font-family: "Roberto", sans-serif;
 	font-style: normal;
 	font-size: 1rem; 
@@ -36,13 +52,13 @@ body {
 }
 
 button {
-    background-color: FFF;
+    background-color: #FFF;
 	border: 1px solid #000;
 	border-radius: 6px;
 	font-size: 1rem;
-	padding: 10px 30px;
+	padding: 10px 50px;
+    margin: 0 40%;
 }
-
 
 button:hover {
     background-color: #cacaca
@@ -64,18 +80,63 @@ button:hover {
     display: grid;
 }
 
+.grid-container {
+    margin: 0 auto;
+    grid-template-columns: 2fr;
+}
+
 .two-columns {
 	grid-template-columns: repeat(2, 1fr);
     text-align: left;
 }
 
-.travel-columns {
-    grid-template-columns: repeat(2, fr);
+.inner-two-columns {
+	grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+}
+
+.travel-grid {
+    display: grid;
+    grid-template-areas: 
+        'travel comment'
+        'travel comment'
+        'package package';
+}
+
+.travel-info {
+    grid-area: travel;
+}
+
+.travel-comment {
+    grid-area: comment;
+}
+
+.travel-package {
+    grid-area: package;
+    text-align: center;
+}
+
+.four-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 #wrapper {
-    margin: 10vw;
+    margin: 0 auto;
 }
+
+@media screen and (min-width: 480px) {
+    main {
+        margin: 0 5vw;
+        width: 50%;
+    }
+    body {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
 /*TODO:
     Add background
     Add grids, it looks ugly right now I FUCKKING HATE GRIDS
