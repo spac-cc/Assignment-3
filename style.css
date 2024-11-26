@@ -1,8 +1,10 @@
+/*Textarea Specific*/
 textarea[id=cvc],
 textarea[id=cardNum]{
     resize: none;
 }
 
+/*Elements*/
 p {
     text-align: center;
 }
@@ -40,24 +42,31 @@ fieldset {
 }
 
 body {
-    background-image: url(img/background.jpg);
+    background-image: url(img/background.png);
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
 	color: #FFF;
 	font-family: "Roberto", sans-serif;
 	font-style: normal;
 	font-size: 1rem; 
 	margin: 0 auto;
+    height:100vh;
 }
 
 button {
-    background-color: #FFF;
-	border: 1px solid #000;
-	border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.6);
+	border-color: rgba(0, 0, 0, 0.2);
+	border-style: solid;
+    border-radius: 6px;
+    color: #FFF;
 	font-size: 1rem;
 	padding: 10px 50px;
-    margin: 0 40%;
+}
+
+/*Classes and related*/
+.button-container {
+    text-align: center;
 }
 
 button:hover {
@@ -116,29 +125,36 @@ button:hover {
     text-align: center;
 }
 
-.four-columns {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
 
+/*IDS*/
 #wrapper {
-    margin: 0 auto;
+    margin: 15px auto;
+	width: 95%;
 }
 
-@media screen and (min-width: 480px) {
-    main {
-        margin: 0 5vw;
-        width: 50%;
-    }
-    body {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+
+/*Media Queries*/
+@media screen and (min-width: 768px) {
+	body{
+		font-size:1.1rem;
+	}
+
+	.two-columns {
+		gap: 15px;
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
-/*TODO:
-    Add background
-    Add grids, it looks ugly right now I FUCKKING HATE GRIDS
-    Style the submit button, that is fucking atrocious -- PARTLY DONE
-    Make it all look fucking good*/
+@media screen and (min-width: 1440px) {
+	body {
+		font-size: 1.25rem;
+	}
+
+	#wrapper {
+		width: 65%;
+	}
+
+	.two-columns {
+		gap: 20px;
+	}
+}
